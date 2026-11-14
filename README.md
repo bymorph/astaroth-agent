@@ -37,10 +37,14 @@ only when every rule passes; anything it cannot prove is a REJECT:
 | Fail closed | Missing field, RPC error, or any uncertainty → REJECT |
 
 This is not a weekend toy. The rules are the operating rules of a live agent
-that has run on BNB Smart Chain since October 2026 — see
-[`evidence.json`](evidence.json) for the receipts, including the times the
-rules *blocked* an action: a `$DROG` burn and a PokeChain listing, both
-stopped by the wallet risk engine with no transaction sent and no gas spent.
+that has run on BNB Smart Chain since October 2026 — executed through the
+Binance Agentic Wallet (`baw`) using three Binance Agent ID wallets
+(`astaroth.ai`, `4leafclover.ai`, `gemini30.ai`). That wallet's
+preview/simulation and risk engine are the execution layer the rules sit on:
+the blocks below were enforced by that engine (error `351803`). The demo in
+this repo is standalone — it does not connect to Binance, holds no wallet
+session, and cannot sign anything; it re-implements the same rules against
+public RPC, read-only.
 
 ## Run it
 
