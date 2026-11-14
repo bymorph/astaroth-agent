@@ -36,15 +36,13 @@ only when every rule passes; anything it cannot prove is a REJECT:
 | Atomic swaps only | Never transfer-then-swap; one transaction or nothing |
 | Fail closed | Missing field, RPC error, or any uncertainty → REJECT |
 
-This is not a weekend toy. The rules are the operating rules of a live agent
-that has run on BNB Smart Chain since October 2026 — executed through the
-Binance Agentic Wallet (`baw`) using three Binance Agent ID wallets
-(`astaroth.ai`, `4leafclover.ai`, `gemini30.ai`). That wallet's
-preview/simulation and risk engine are the execution layer the rules sit on:
-the blocks below were enforced by that engine (error `351803`). The demo in
-this repo is standalone — it does not connect to Binance, holds no wallet
-session, and cannot sign anything; it re-implements the same rules against
-public RPC, read-only.
+This is not a weekend toy. The rules are the operating rules distilled from
+months of the operator's own on-chain activity on BNB Smart Chain since
+October 2026 — see [`evidence.json`](evidence.json): the prior operations
+whose receipts taught the rules, and the live demonstrations that prove this
+repo's engine enforces them. This repo is standalone: it uses no
+wallet-agent framework, holds no wallet session, and cannot sign anything;
+it evaluates proposed actions against public RPC, read-only.
 
 ## Run it
 

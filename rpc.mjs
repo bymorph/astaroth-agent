@@ -7,11 +7,9 @@
 import { execFile } from "node:child_process";
 
 export const RPC_ENDPOINTS = [
-  "https://bsc-dataseed.binance.org/",
   "https://bsc-dataseed1.defibit.io/",
   "https://bsc-dataseed1.ninicoin.io/",
   "https://bsc.publicnode.com/",
-  "https://rpc.ankr.com/bsc",
 ];
 
 const TIMEOUT_MS = 8000;
